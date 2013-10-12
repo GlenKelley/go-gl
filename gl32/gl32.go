@@ -1266,7 +1266,7 @@ func GetProgramInfoLog(program Program) string {
 	GetProgramiv(program, INFO_LOG_LENGTH, &length)
 	size := C.GLsizei(length)
 	cInfoLog := cString(size)
-	defer C.free(unsafe.Pointer(cInfoLog))
+	defer freeString(cInfoLog)
 	C.glGetProgramInfoLog((C.GLuint)(program), size, &size, cInfoLog)
 	return C.GoStringN((*C.char)(cInfoLog), C.int(size))
 }
@@ -1278,7 +1278,7 @@ func GetShaderInfoLog(shader Uint) string {
 	GetShaderiv(shader, INFO_LOG_LENGTH, &length)
 	size := C.GLsizei(length)
 	cInfoLog := cString(size)
-	defer C.free(unsafe.Pointer(cInfoLog))
+	defer freeString(cInfoLog)
 	C.glGetShaderInfoLog((C.GLuint)(shader), size, &size, cInfoLog)
 	return C.GoStringN((*C.char)(cInfoLog), C.int(size))
 }
