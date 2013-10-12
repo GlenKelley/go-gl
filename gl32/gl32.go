@@ -9,6 +9,8 @@ package gl32
 // #include <OpenGL/gl3.h>
 // #else
 // #include <GL/glew.h>
+// #undef GLEW_GET_FUN
+// #define GLEW_GET_FUN(x) (*x)
 // #endif
 import "C"
 import "unsafe"
