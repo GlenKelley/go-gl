@@ -524,8 +524,8 @@ const (
 	CLIP_DISTANCE3                                = C.GL_CLIP_DISTANCE3
 	CLIP_DISTANCE4                                = C.GL_CLIP_DISTANCE4
 	CLIP_DISTANCE5                                = C.GL_CLIP_DISTANCE5
-	CLIP_DISTANCE6                                = C.GL_CLIP_DISTANCE6
-	CLIP_DISTANCE7                                = C.GL_CLIP_DISTANCE7
+   // CLIP_DISTANCE6                                = C.GL_CLIP_DISTANCE6
+   // CLIP_DISTANCE7                                = C.GL_CLIP_DISTANCE7
 	COLOR_ATTACHMENT0                             = C.GL_COLOR_ATTACHMENT0
 	COLOR_ATTACHMENT1                             = C.GL_COLOR_ATTACHMENT1
 	COLOR_ATTACHMENT10                            = C.GL_COLOR_ATTACHMENT10
