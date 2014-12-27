@@ -907,7 +907,7 @@ func Clear(mask Bitfield) {
 	C.glClear((C.GLbitfield)(mask))
 }
 func ClearColor(red Float, green Float, blue Float, alpha Float) {
-	C.glClearColor((C.GLclampf)(red), (C.GLclampf)(green), (C.GLclampf)(blue), (C.GLclampf)(alpha))
+	C.glClearColor((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
 func ClearStencil(s Int) {
 	C.glClearStencil((C.GLint)(s))
@@ -1056,7 +1056,7 @@ func IsTexture(texture Texture) Boolean {
 // OpenGL 1.2
 
 func BlendColor(red Float, green Float, blue Float, alpha Float) {
-	C.glBlendColor((C.GLclampf)(red), (C.GLclampf)(green), (C.GLclampf)(blue), (C.GLclampf)(alpha))
+	C.glBlendColor((C.GLfloat)(red), (C.GLfloat)(green), (C.GLfloat)(blue), (C.GLfloat)(alpha))
 }
 func BlendEquation(mode Enum) {
 	C.glBlendEquation((C.GLenum)(mode))
